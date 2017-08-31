@@ -1,0 +1,3 @@
+Calculate the orbital energy of the satellite. 
+(vis-viva equation + perturbation to compensate for drag)
+Check out the relativistic form as well.
