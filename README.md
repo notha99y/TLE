@@ -15,9 +15,16 @@ This is just a toy concept to test out a statistical approach to predict TLE ins
 ## Time plots of TLE components
 ![sat41169](sat41169.png)
 <p align = "center">
-Fig. Time plots of the TLE components for sat41169
+Fig.1 Time plots of the TLE components for sat41169
 </p>
 
+![sat39227](sat39227.png)
+<p align = "center">
+Fig.1 Time plots of the TLE components for sat39227
+</p>
+
+
+## Prediction of Linear Regression Model
 # References
 [1] Two Line Element https://en.wikipedia.org/wiki/Two-line_element_set <br>
 [2] BSTAR Drag Term https://en.wikipedia.org/wiki/BSTAR <br>
