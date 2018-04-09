@@ -20,11 +20,20 @@ Fig.1 Time plots of the TLE components for sat41169
 
 ![sat39227](sat39227.png)
 <p align = "center">
-Fig.1 Time plots of the TLE components for sat39227
+Fig.2 Time plots of the TLE components for sat39227
 </p>
 
 
 ## Prediction of Linear Regression Model
+![Trained Linear Regression Model](Training.png)
+<p align = "center">
+Fig.3 Trained Linear Regression Model for sat41169
+</p>
+
+![Prediction Results](Prediction.png)
+<p align = "center">
+Fig.3 Prediction Results for sat41169
+</p>
 # References
 [1] Two Line Element https://en.wikipedia.org/wiki/Two-line_element_set <br>
 [2] BSTAR Drag Term https://en.wikipedia.org/wiki/BSTAR <br>
