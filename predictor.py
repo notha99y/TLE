@@ -1,3 +1,7 @@
+'''
+This script does the prediction of the future Two Line Elements (TLE) given a certain Satellite's TLE
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from tle import *

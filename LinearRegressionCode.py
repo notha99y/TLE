@@ -1,3 +1,7 @@
+'''
+Linear Regression code using the numpy package
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd

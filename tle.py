@@ -1,3 +1,8 @@
+'''
+This script contains the helper functions to read and plot Two Line Element (TLE) files
+You can also run the script to do plots of the TLE
+'''
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -94,6 +99,7 @@ def wrapping(data, increasing = True):
             if data[i] + counter*360.0 < 0:
                 counter += 1
     return np.array(dataWrapped)
+
 def plotTLE(fileName, plot = True, angleUnwrapped = True):
     data = readTLE(fileName)
 
