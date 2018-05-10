@@ -13,29 +13,29 @@ The event that shook the space world is the first reported payload-to-payload co
 This is just a toy concept to test out a statistical approach to predict TLE instead of the conventional propagation model. As the cadence of TLE updates is high (~ twice daily), this source of data is suitable for times series analysis or machine learning techniques. In this repo, I would present a simple Linear Regression to predict TLE. As the regression model does not factor in physical laws of Newtonian, the above mentioned error propagation through time of the momentum would not apply.
 
 ## Time plots of TLE components
-![sat41169](sat41169.png)
+![sat41169](figures\sat41169.png)
 <p align = "center">
 Fig.1 Time plots of the TLE components for sat41169
 </p>
 
-![sat39227](sat39227.png)
+![sat39227](figures\sat39227.png)
 <p align = "center">
 Fig.2 Time plots of the TLE components for sat39227
 </p>
 
 
 ## Prediction of Linear Regression Model
-![Trained Linear Regression Model](Training.png)
+![Trained Linear Regression Model](figures\Training.png)
 <p align = "center">
 Fig.3 Trained Linear Regression Model for sat41169
 </p>
 
-![Prediction Results](Prediction.png)
+![Prediction Results](figures\Prediction.png)
 <p align = "center">
 Fig.3 Prediction Results for sat41169
 </p>
 
-# References 
+# References
 [1] Two Line Element https://en.wikipedia.org/wiki/Two-line_element_set <br>
 [2] BSTAR Drag Term https://en.wikipedia.org/wiki/BSTAR <br>
 [3] Celestrak https://celestrak.com/ <br>
