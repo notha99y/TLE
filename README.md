@@ -18,19 +18,19 @@ This is just a toy concept to test out a statistical approach to predict TLE ins
 Fig.1 Time plots of the TLE components for sat41169
 </p>
 
-![sat39227](figures\sat39227.png)
+![sat39227](figures/sat39227.png)
 <p align = "center">
 Fig.2 Time plots of the TLE components for sat39227
 </p>
 
 
 ## Prediction of Linear Regression Model
-![Trained Linear Regression Model](figures\Training.png)
+![Trained Linear Regression Model](figures/Training.png)
 <p align = "center">
 Fig.3 Trained Linear Regression Model for sat41169
 </p>
 
-![Prediction Results](figures\Prediction.png)
+![Prediction Results](figures/Prediction.png)
 <p align = "center">
 Fig.3 Prediction Results for sat41169
 </p>
