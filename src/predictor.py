@@ -4,11 +4,19 @@ This script does the prediction of the future Two Line Elements (TLE) given a ce
 
 import numpy as np
 import matplotlib.pyplot as plt
-from tle import *
-from LinearRegressionCode import *
+import os
+from src.tle import *
+from src.LinearRegressionCode import *
 
 
 def predictTLELinearReg(data, plotLines=True, getStats=True):
+    '''
+    Inputs
+    ------
+    data: file path to the TLE data
+    plotLines: if set True would plot trained LinearReg Line
+    getStats: if set True would write a stats file
+    '''
     dataEpoch = []
     dataBStar = []
     dataIncl = []
@@ -126,10 +134,22 @@ def predictTLELinearReg(data, plotLines=True, getStats=True):
     return mBStar, bBStar, mIncl, bIncl, mEcc, bEcc, mMeanMotion, bMeanMotion, mAOPUnwrapped, bAOPUnwrapped, mRAANUnwrapped, bRAANUnwrapped, mMeanAnomalyUnwrapped, bMeanAnomalyUnwrapped
 
 
-def main(fileName, testFileName):
+def predict(fileName, testFileName):
+    '''
+    Function trains a LinearReg Line and predicts TLE
+
+    Inputs
+    -------
+    fileName: file path for training TLE data
+    testFileName: file path for testing TLE data
+
+    Outputs
+    -------
+
+    '''
     data = readTLE(fileName)
     mBStar, bBStar, mIncl, bIncl, mEcc, bEcc, mMeanMotion, bMeanMotion, mAOPUnwrapped, bAOPUnwrapped, mRAANUnwrapped, bRAANUnwrapped, mMeanAnomalyUnwrapped, bMeanAnomalyUnwrapped = predictTLELinearReg(
-        data)
+        data, plotLines=False, getStats=False)
     testData = readTLE(testFileName)
 
     xline = np.linspace(0, 700, 10e4)
@@ -158,8 +178,10 @@ def main(fileName, testFileName):
     testDataMeanMotion = []
     testDataFirstDMeanMotion = []
     testDataSecondDMeanMotion = []
-
+    print("I am here.")
+    print(len(testData))
     for i in range(len(testData)):
+        print("hi", i)
         testDataBStar.append(testData[i].get('BStar'))
         testDataIncl.append(testData[i].get('Incl'))
         testDataRAAN.append(testData[i].get('RAAN'))
@@ -173,6 +195,8 @@ def main(fileName, testFileName):
         testDataEpoch.append(tempEpoch)
 
     fig, ax = plt.subplots(3, 2, sharex='all')
+
+    figure = fig.get_figure()
 
     ax[0][0].scatter(xline, predBStar, c='r', marker=".", alpha=0.5)
     ax[0][0].scatter(testDataEpoch, testDataBStar, s=100, alpha=0.5)
@@ -201,4 +225,7 @@ def main(fileName, testFileName):
 
 
 if __name__ == '__main__':
-    main('sat41169.txt', 'sat41169test27junto7jul.txt')
+    datapath = os.path.join(os.path.join(os.getcwd(), 'TLE'), 'data')
+    # print(datapath)
+    predict(os.path.join(datapath, 'sat41169.txt'),
+            os.path.join(datapath, 'sat41169test27junto7jul.txt'))

@@ -77,14 +77,14 @@ def unwrapping(data, increasing=True):
         for i in range(len(data)):
             dataUnwrapped.append(data[i] + counter*360.0)
             if i < len(data)-1 and data[i+1] - data[i] < -thresholdIn:
-                print('taking a step upwards of 360 deg: ', i)
+                # print('taking a step upwards of 360 deg: ', i)
                 counter += 1
     else:
         # print("The unwrapping data is decreasing with Epoch")
         for i in range(len(data)):
             dataUnwrapped.append(data[i] + counter*360.0)
             if i < len(data)-1 and data[i+1] - data[i] > thresholdDe:
-                print('taking a step downwards of 360 deg: ', i)
+                # print('taking a step downwards of 360 deg: ', i)
                 counter -= 1
     return np.array(dataUnwrapped)
 

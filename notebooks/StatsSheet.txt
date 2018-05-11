@@ -1,0 +1,6 @@
+BStar has a measurement mean of nan and stdev of nan
+Inclination has a measurement mean of 14.980211921891058 and stdev of 0.0025883368943766002
+Eccentricity has a measurement mean of 0.0010744715313463513 and stdev of 4.019441757165102e-05
+Arguement of Perigee has a measurement mean of 3866.002874820144 and stdev of 2001.604259590559
+RAAN has a measurement mean of -1838.1083577595066 and stdev of 1054.8334257479698
+Mean Anomaly has a measurement mean of -15169.02565806783 and stdev of 10421.75398223111

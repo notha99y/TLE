@@ -5,7 +5,7 @@ Linear Regression code using the numpy package
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from tle import *
+from src.tle import *
 
 
 def error(X, Y, m, b):
