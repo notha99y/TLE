@@ -1,6 +1,6 @@
 # Two Line Element Predictor
 ### Author: Tan Ren Jie
-### Dated: 14 Oct 2017
+### Dated: 11 May 2018
 [Two Line Elements (TLE)](https://en.wikipedia.org/wiki/Two-line_element_set)[1] is a data format widely used to track objects orbiting Earth. Encoded in the TLE is the 6-D state vectors, [BSTAR](https://en.wikipedia.org/wiki/BSTAR)[2] drag term, first and second derivative of the mean motion, and other miscellaneous of the object. <br>
 
 There are various established propagation models such as SGP, SGP4, SDP4, SGP8 and SDP8 which are used to predict the future state vectors of the satellites. However, due to the inherent uncertainties of the TLE, this error gets propagated through time as well. For example, a typical TLE downloaded from [Celestrak](https://celestrak.com/)[3], the momentum vector components, Px, Py, Pz, could, on average, carry an uncertainty of +-10km/h. After a day, the uncertainty would be then +-240km/h which is not ideal. Very often, the state vectors produced by such propagation models are not accurate and cannot be used after a day of simulation. They have to be refreshed by getting new TLEs. <br>
@@ -13,29 +13,29 @@ The event that shook the space world is the first reported payload-to-payload co
 This is just a toy concept to test out a statistical approach to predict TLE instead of the conventional propagation model. As the cadence of TLE updates is high (~ twice daily), this source of data is suitable for times series analysis or machine learning techniques. In this repo, I would present a simple Linear Regression to predict TLE. As the regression model does not factor in physical laws of Newtonian, the above mentioned error propagation through time of the momentum would not apply.
 
 ## Time plots of TLE components
-![sat41169](sat41169.png)
+![sat41169](figures/sat41169.png)
 <p align = "center">
 Fig.1 Time plots of the TLE components for sat41169
 </p>
 
-![sat39227](sat39227.png)
+![sat39227](figures/sat39227.png)
 <p align = "center">
 Fig.2 Time plots of the TLE components for sat39227
 </p>
 
 
 ## Prediction of Linear Regression Model
-![Trained Linear Regression Model](Training.png)
+![Trained Linear Regression Model](figures/Training.png)
 <p align = "center">
 Fig.3 Trained Linear Regression Model for sat41169
 </p>
 
-![Prediction Results](Prediction.png)
+![Prediction Results](figures/Prediction.png)
 <p align = "center">
 Fig.3 Prediction Results for sat41169
 </p>
 
-# References 
+# References
 [1] Two Line Element https://en.wikipedia.org/wiki/Two-line_element_set <br>
 [2] BSTAR Drag Term https://en.wikipedia.org/wiki/BSTAR <br>
 [3] Celestrak https://celestrak.com/ <br>
